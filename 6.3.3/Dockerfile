@@ -195,5 +195,9 @@ EXPOSE 8080
 #-d option is passed to run knowage forever without exiting from container
 ENTRYPOINT ["./entrypoint.sh"]
 
+#To assign all permission at all user
+CMD ["chmod 777 -R ${KNOWAGE_DIRECTORY}"]
+
+
 #this will start knowage just after the previous entrypoint
 CMD ["./startup.sh"]
